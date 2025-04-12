@@ -1,16 +1,118 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #222;
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
+  max-width: 1280px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 20px;
+  color: #ccc;
+  text-align: center;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+#upload-button, #image-button {
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+#upload-button {
+  background-color: #4caf50;
+}
+
+#upload-button:hover {
+  background-color: #45a049;
+}
+
+#image-button {
+  background-color: #3498db;
+}
+
+#image-button:hover {
+  background-color: #2980b9;
+}
+
+#processing-message {
+  margin: 10px 0;
+  color: #ffcc00;
+  font-weight: bold;
 }
 
 #video-container {
-    width: 640px;
-    height: 480px;
-    background-color: black;
-    color: white;
-    font-family: monospace;
-    white-space: pre;
+  width: 640px; /* Initial size, will be updated dynamically */
+  height: 480px; /* Initial size, will be updated dynamically */
+  background-color: black;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
+  transition: width 0.3s, height 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ascii-frame {
+  font-family: "Courier New", monospace; /* Consistent monospace font */
+  font-size: 10px; /* Default size, dynamically updated by JS */
+  line-height: 1;
+  letter-spacing: 0;
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* These styles will be dynamically updated by JS to match video dimensions */
+.ascii-frame div {
+  height: 10px;
+  line-height: 10px;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.ascii-frame span {
+  display: inline-block;
+  width: 6px; /* Default width, dynamically updated by JS */
+  height: 100%;
+  text-align: center;
 }

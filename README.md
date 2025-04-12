@@ -14,5 +14,10 @@ This project decodes a video file and converts it to raw RGB pixel data. It then
 
 ## Instructions
 1. Open the `index.html` file in a web browser.
-2. Upload a video file using the file input.
+2. Click the "Upload Video" button to select a video file.
 3. The video will be processed and displayed as ASCII art in the browser.
+
+## Notes
+- The title element with the text "ASCII Video Player" has been added.
+- A file input element with an id of "video-upload" has been added.
+- A button element with an id of "upload-button" and text "Upload Video" has been added.

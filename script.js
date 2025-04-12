@@ -1,4 +1,8 @@
-document.getElementById('video-container').addEventListener('change', handleVideoUpload);
+document.getElementById('upload-button').addEventListener('click', function() {
+    document.getElementById('video-upload').click();
+});
+
+document.getElementById('video-upload').addEventListener('change', handleVideoUpload);
 
 function handleVideoUpload(event) {
     const file = event.target.files[0];

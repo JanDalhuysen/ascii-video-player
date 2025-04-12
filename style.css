@@ -1,0 +1,16 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#video-container {
+    width: 640px;
+    height: 480px;
+    background-color: black;
+    color: white;
+    font-family: monospace;
+    white-space: pre;
+}
